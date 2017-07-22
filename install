@@ -3,19 +3,19 @@
 git clone https://github.com/ColdGrub1384/fastSwift-Server-Installer.git
 
 if [ "$USER" != "root" ]; then echo "Run this as root to create /home/fastswift"; exit; fi
-echo "Creating database..."
-mkdir ~/.db
 echo "Creating /home/fastswift..."
 mkdir /home/fastswift
 echo "Copying FFKit.swift to /home/fastswift..."
-mv fastSwift-Server-Installer-master/FFKit.swift /home/fastswift/FFKit.swift
+mv fastSwift-Server-Installer/FFKit.swift /home/fastswift/FFKit.swift
 echo "Creating $1 user..."
 adduser --gecos "" $1 
+echo "Creating database..."
+mkdir /home/$1/.db
 check_stat=`ps -ef | grep sshd | grep -v grep | awk '{print $2}'`
 if [ "${check_stat}X" != "X" ]
 then
 echo ""
 else
-echo "Enable SSH for $(who am i | awk '{print $1}')"
+echo "Enable SSH for $SUDO_USER"
 fi
-echo "Server: $(who am i | awk '{print $1}')@$(/sbin/ifconfig | grep -e "inet:" -e "addr:" | grep -v "inet6" | grep -v "127.0.0.1" | head -n 1 | awk '{print $2}' | cut -c6-)"
+echo "Server: $1@$(/sbin/ifconfig | grep -e "inet:" -e "addr:" | grep -v "inet6" | grep -v "127.0.0.1" | head -n 1 | awk '{print $2}' | cut -c6-)"
