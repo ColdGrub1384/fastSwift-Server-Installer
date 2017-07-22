@@ -7,10 +7,16 @@ All you need is an SSH server with an user login credentials (if possible specia
 ### Install Swift
 [For Ubuntu](https://swift.org/download/) and for [Raspberry Pi](http://www.agreatdaytocode.com/installing-swift-3-0-on-raspberry-pi/)(ARM in general)
 
-# Installation or update of FFKit
+# Installation or update and create a 'swiftexec' user
 ```
-curl -s -L http://goo.gl/hPvdsn | bash -s swiftexec
+curl -s -L http://goo.gl/hPvdsn | sudo bash -s swiftexec
 ```
+
+# Installation or update on current user
+```
+curl -s -L http://goo.gl/hPvdsn | sudo bash -s $USER
+```
+
 
 # Usage
 
