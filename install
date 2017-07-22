@@ -1,12 +1,14 @@
 #!/bin/bash
 
+git clone https://github.com/ColdGrub1384/fastSwift-Server-Installer.git
+
 if [ "$USER" != "root" ]; then echo "Run $0 as root to create /home/fastswift"; exit; fi
 echo "Creating database..."
 mkdir ~/.db
 echo "Creating /home/fastswift..."
 mkdir /home/fastswift
 echo "Copying FFKit.swift to /home/fastswift..."
-mv FFKit.swift /home/fastswift/FFKit.swift
+mv fastSwift-Server-Installer-master/FFKit.swift /home/fastswift/FFKit.swift
 echo "Creating $1 user..."
 adduser --gecos "" $1 
 check_stat=`ps -ef | grep sshd | grep -v grep | awk '{print $2}'`
