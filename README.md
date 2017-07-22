@@ -8,5 +8,5 @@ All you need is an SSH server with an user login credentials (if possible specia
 
 # Installation
 ```
-git clone https://github.com/ColdGrub1384/fastSwift-Server-Installer.git; cd fastSwift-Server-Installer-master; install swiftexec; cd ../ && rm -rf fastSwift-Server-Installer
+git clone https://github.com/ColdGrub1384/fastSwift-Server-Installer.git; fastSwift-Server-Installer-master/install swiftexec && rm -rf fastSwift-Server-Installer
 ```
