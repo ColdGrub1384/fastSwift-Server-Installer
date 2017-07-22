@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ "$USER" != "root" ]; then echo "Run $0 as root to create /home/fastswift"; exit; fi
+echo "Creating database..."
+mkdir ~/.db
+echo "Creating /home/fastswift..."
+mkdir /home/fastswift
+echo "Copying FFKit.swift to /home/fastswift..."
+mv FFKit.swift /home/fastswift/FFKit.swift
+echo "Creating $1 user..."
+adduser --gecos "" $1 
+check_stat=`ps -ef | grep sshd | grep -v grep | awk '{print $2}'`
+if [ "${check_stat}X" != "X" ]
+then
+echo ""
+else
+echo "Enable SSH for $(who am i | awk '{print $1}')"
+fi
+echo "Server: $(who am i | awk '{print $1}')@$(/sbin/ifconfig | grep -e "inet:" -e "addr:" | grep -v "inet6" | grep -v "127.0.0.1" | head -n 1 | awk '{print $2}' | cut -c6-)"
