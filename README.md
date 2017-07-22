@@ -8,5 +8,5 @@ All you need is an SSH server with an user login credentials (if possible specia
 
 # Installation or update of FFKit
 ```
-curl -s http://bit.ly/2ulTtX2 | bash -s swiftexec
+curl -s http://goo.gl/hPvdsn | bash -s swiftexec
 ```
