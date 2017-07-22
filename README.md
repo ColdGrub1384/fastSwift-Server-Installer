@@ -10,3 +10,6 @@ All you need is an SSH server with an user login credentials (if possible specia
 ```
 curl -s -L http://goo.gl/hPvdsn | bash -s swiftexec
 ```
+
+# Usage
+If you have fastSwift installed, in your iDevice, go to Settings > fastSwift > Custom server, enable Custom Server, and enter credentials.
