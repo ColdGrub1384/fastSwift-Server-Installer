@@ -6,7 +6,7 @@ All you need is an SSH server with an user login credentials (if possible specia
 ### Install Swift
 [For Ubuntu](https://swift.org/download/) and for [Raspberry Pi (ARM in general)](http://www.agreatdaytocode.com/installing-swift-3-0-on-raspberry-pi/)
 
-# Installation
+# Installation or update of FFKit
 ```
 git clone https://github.com/ColdGrub1384/fastSwift-Server-Installer.git; fastSwift-Server-Installer-master/install swiftexec && rm -rf fastSwift-Server-Installer
 ```
