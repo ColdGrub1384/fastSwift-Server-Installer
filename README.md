@@ -11,6 +11,7 @@ All you need is an SSH server with an user login credentials (if possible specia
 ```
 curl -s -L http://goo.gl/hPvdsn | sudo bash -s swiftexec swift
 ```
+(You can replace swiftexec by another username and swift by another password)
 
 # Installation or update on current user
 ```
