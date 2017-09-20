@@ -8,7 +8,8 @@ mkdir /home/fastswift
 echo "Copying FFKit.swift to /home/fastswift..."
 mv fastSwift-Server-Installer/FFKit.swift /home/fastswift/FFKit.swift
 echo "Creating $1 user..."
-adduser --gecos "" $1 
+adduser --disabled-password --gecos "" $1 
+echo $2 | passwd $1 --stdin
 echo "Creating database..."
 mkdir /home/$1/.db
 check_stat=`ps -ef | grep sshd | grep -v grep | awk '{print $2}'`
