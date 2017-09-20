@@ -9,7 +9,7 @@ All you need is an SSH server with an user login credentials (if possible specia
 
 # Installation or update and create a 'swiftexec' user
 ```
-curl -s -L http://goo.gl/hPvdsn | sudo bash -s swiftexec
+curl -s -L http://goo.gl/hPvdsn | sudo bash -s swiftexec swift
 ```
 
 # Installation or update on current user
