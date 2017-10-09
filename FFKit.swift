@@ -9,6 +9,37 @@ class FFKit {
 	static func clearShell() {
 		print("Program output")
 	}
+	
+	static func showAlert(title:String?, message:String?, buttons:[String]) {
+                if buttons.count == 0 {
+                        return print("Error: No buttons for alert!")
+                }
+
+                var alert = "<showAlert>"
+                if title != nil {
+                        alert += "<title>\(title!)</title>"
+                }
+
+                if message != nil {
+                        alert += "<message>\(message!)</message>"
+                }
+
+                alert += "<buttons>"
+
+                var index = 0
+                for button in buttons {
+                        alert += button
+                        if buttons.count > index+1 {
+                                alert += "<bt>"
+                        }
+
+                        index += 1
+                }
+
+                alert += "</buttons></showAlert>"
+
+                return print(alert)
+        }
 
 	static func downloadExec() {
 		print("DownloadBinaryFileNowInCurrentVC")
