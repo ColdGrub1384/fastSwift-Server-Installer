@@ -10,7 +10,7 @@ mv fastSwift-Server-Installer/FFKit.swift /home/fastswift/FFKit.swift
 echo "Creating $1 user..."
 adduser --disabled-password --gecos "" $1 
 echo -e "$2\n$2" | passwd $1
-touch /home/$1/latest.html
+touch /home/fastswift/latest.html
 echo "Creating database..."
 mkdir /home/$1/.db
 check_stat=`ps -ef | grep sshd | grep -v grep | awk '{print $2}'`
