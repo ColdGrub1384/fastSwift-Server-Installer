@@ -57,28 +57,28 @@ class FFKit {
 			return print("Error: No buttons for alert!")
 		}
 
-		var alert = "&lt;showAlert&gt;"
+		var alert = "<showAlert>"
 		if title != nil {
-			alert += "&lt;title&gt;\(title!)&lt;/title&gt;"
+			alert += "<title>\(title!)</title>"
 		}
 
 		if message != nil {
-			alert += "&lt;message&gt;\(message!)&lt;/message&gt;"
+			alert += "<message>\(message!)</message>"
 		}
 		
-		alert += "&lt;buttons&gt;"
+		alert += "<buttons>"
 	
 		var index = 0
 		for button in buttons {
 			alert += button
 			if buttons.count > index+1 {
-				alert += "&lt;bt&gt;"
+				alert += "<bt>;"
 			}
 
 			index += 1
 		}
 
-		alert += "&lt;/buttons&gt;&lt;/showAlert&gt;"
+		alert += "</buttons></showAlert>"
 
 		return print(alert)
 	} 
